@@ -1,14 +1,6 @@
-//
-//  SwiftNesFrontendUITestsLaunchTests.swift
-//  SwiftNesFrontendUITests
-//
-//  Created by Jordan Christensen on 2/10/25.
-//
-
 import XCTest
 
 final class SwiftNesFrontendUITestsLaunchTests: XCTestCase {
-
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

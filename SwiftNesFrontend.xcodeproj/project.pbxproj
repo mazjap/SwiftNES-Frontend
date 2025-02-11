@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		0EAF26092D5AA9EB00E089B3 /* SwiftNES in Frameworks */ = {isa = PBXBuildFile; productRef = 0EAF26082D5AA9EB00E089B3 /* SwiftNES */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		0EAF25E92D5AA91600E089B3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EAF26092D5AA9EB00E089B3 /* SwiftNES in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +117,7 @@
 			);
 			name = SwiftNesFrontend;
 			packageProductDependencies = (
+				0EAF26082D5AA9EB00E089B3 /* SwiftNES */,
 			);
 			productName = SwiftNesFrontend;
 			productReference = 0EAF25D72D5AA91500E089B3 /* SwiftNesFrontend.app */;
@@ -195,6 +201,9 @@
 			);
 			mainGroup = 0EAF25CE2D5AA91500E089B3;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				0EAF26072D5AA9EB00E089B3 /* XCRemoteSwiftPackageReference "SwiftNES" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0EAF25D82D5AA91500E089B3 /* Products */;
 			projectDirPath = "";
@@ -591,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0EAF26072D5AA9EB00E089B3 /* XCRemoteSwiftPackageReference "SwiftNES" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mazjap/SwiftNES";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0EAF26082D5AA9EB00E089B3 /* SwiftNES */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0EAF26072D5AA9EB00E089B3 /* XCRemoteSwiftPackageReference "SwiftNES" */;
+			productName = SwiftNES;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0EAF25CF2D5AA91500E089B3 /* Project object */;
 }

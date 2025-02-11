@@ -1,21 +1,14 @@
-//
-//  ContentView.swift
-//  SwiftNesFrontend
-//
-//  Created by Jordan Christensen on 2/10/25.
-//
-
 import SwiftUI
+import SwiftNES
 
 struct ContentView: View {
+    let emulator = NES()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        Spacer()
+            .onAppear {
+                // TODO: - Do NES stuff
+            }
     }
 }
 

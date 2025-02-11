@@ -1,14 +1,6 @@
-//
-//  SwiftNesFrontendUITests.swift
-//  SwiftNesFrontendUITests
-//
-//  Created by Jordan Christensen on 2/10/25.
-//
-
 import XCTest
 
 final class SwiftNesFrontendUITests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
 

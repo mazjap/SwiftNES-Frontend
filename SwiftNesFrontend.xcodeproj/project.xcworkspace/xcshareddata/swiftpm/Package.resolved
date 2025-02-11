@@ -1,0 +1,15 @@
+{
+  "originHash" : "3164237e9d600b2d1e0385ec7fbceefc33bb7467901c3b4b33b52ac106a09fb7",
+  "pins" : [
+    {
+      "identity" : "swiftnes",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/mazjap/SwiftNES",
+      "state" : {
+        "branch" : "main",
+        "revision" : "0a36a88a0c354a613c2a674b5f4fa4f3a8a944bf"
+      }
+    }
+  ],
+  "version" : 3
+}
