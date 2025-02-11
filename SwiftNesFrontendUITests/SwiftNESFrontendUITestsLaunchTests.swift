@@ -1,6 +1,6 @@
 import XCTest
 
-final class SwiftNesFrontendUITestsLaunchTests: XCTestCase {
+final class SwiftNESFrontendUITestsLaunchTests: XCTestCase {
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
     }

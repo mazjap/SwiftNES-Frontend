@@ -28,15 +28,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0EAF25D72D5AA91500E089B3 /* SwiftNesFrontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftNesFrontend.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EAF25E82D5AA91600E089B3 /* SwiftNesFrontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNesFrontendTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0EAF25F22D5AA91600E089B3 /* SwiftNesFrontendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftNesFrontendUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAF25D72D5AA91500E089B3 /* SwiftNES-Frontend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftNES-Frontend.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAF25E82D5AA91600E089B3 /* SwiftNES-FrontendTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftNES-FrontendTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAF25F22D5AA91600E089B3 /* SwiftNES-FrontendUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SwiftNES-FrontendUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EAF26502D5BF48200E089B3 /* README.md */ = {isa = PBXFileReference; explicitFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0EAF26512D5BF48A00E089B3 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		0EAF25D92D5AA91500E089B3 /* SwiftNesFrontend */ = {
+		0EAF25D92D5AA91500E089B3 /* SwiftNES-Frontend */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = SwiftNesFrontend;
+			path = "SwiftNES-Frontend";
 			sourceTree = "<group>";
 		};
 		0EAF25EB2D5AA91600E089B3 /* SwiftNesFrontendTests */ = {
@@ -80,7 +82,9 @@
 		0EAF25CE2D5AA91500E089B3 = {
 			isa = PBXGroup;
 			children = (
-				0EAF25D92D5AA91500E089B3 /* SwiftNesFrontend */,
+				0EAF26512D5BF48A00E089B3 /* LICENSE */,
+				0EAF26502D5BF48200E089B3 /* README.md */,
+				0EAF25D92D5AA91500E089B3 /* SwiftNES-Frontend */,
 				0EAF25EB2D5AA91600E089B3 /* SwiftNesFrontendTests */,
 				0EAF25F52D5AA91600E089B3 /* SwiftNesFrontendUITests */,
 				0EAF25D82D5AA91500E089B3 /* Products */,
@@ -90,9 +94,9 @@
 		0EAF25D82D5AA91500E089B3 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EAF25D72D5AA91500E089B3 /* SwiftNesFrontend.app */,
-				0EAF25E82D5AA91600E089B3 /* SwiftNesFrontendTests.xctest */,
-				0EAF25F22D5AA91600E089B3 /* SwiftNesFrontendUITests.xctest */,
+				0EAF25D72D5AA91500E089B3 /* SwiftNES-Frontend.app */,
+				0EAF25E82D5AA91600E089B3 /* SwiftNES-FrontendTests.xctest */,
+				0EAF25F22D5AA91600E089B3 /* SwiftNES-FrontendUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,9 +104,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EAF25D62D5AA91500E089B3 /* SwiftNesFrontend */ = {
+		0EAF25D62D5AA91500E089B3 /* SwiftNES-Frontend */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EAF25FC2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNesFrontend" */;
+			buildConfigurationList = 0EAF25FC2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNES-Frontend" */;
 			buildPhases = (
 				0EAF25D32D5AA91500E089B3 /* Sources */,
 				0EAF25D42D5AA91500E089B3 /* Frameworks */,
@@ -113,19 +117,19 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				0EAF25D92D5AA91500E089B3 /* SwiftNesFrontend */,
+				0EAF25D92D5AA91500E089B3 /* SwiftNES-Frontend */,
 			);
-			name = SwiftNesFrontend;
+			name = "SwiftNES-Frontend";
 			packageProductDependencies = (
 				0EAF26082D5AA9EB00E089B3 /* SwiftNES */,
 			);
 			productName = SwiftNesFrontend;
-			productReference = 0EAF25D72D5AA91500E089B3 /* SwiftNesFrontend.app */;
+			productReference = 0EAF25D72D5AA91500E089B3 /* SwiftNES-Frontend.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0EAF25E72D5AA91600E089B3 /* SwiftNesFrontendTests */ = {
+		0EAF25E72D5AA91600E089B3 /* SwiftNES-FrontendTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EAF25FF2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNesFrontendTests" */;
+			buildConfigurationList = 0EAF25FF2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNES-FrontendTests" */;
 			buildPhases = (
 				0EAF25E42D5AA91600E089B3 /* Sources */,
 				0EAF25E52D5AA91600E089B3 /* Frameworks */,
@@ -139,16 +143,16 @@
 			fileSystemSynchronizedGroups = (
 				0EAF25EB2D5AA91600E089B3 /* SwiftNesFrontendTests */,
 			);
-			name = SwiftNesFrontendTests;
+			name = "SwiftNES-FrontendTests";
 			packageProductDependencies = (
 			);
 			productName = SwiftNesFrontendTests;
-			productReference = 0EAF25E82D5AA91600E089B3 /* SwiftNesFrontendTests.xctest */;
+			productReference = 0EAF25E82D5AA91600E089B3 /* SwiftNES-FrontendTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		0EAF25F12D5AA91600E089B3 /* SwiftNesFrontendUITests */ = {
+		0EAF25F12D5AA91600E089B3 /* SwiftNES-FrontendUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EAF26022D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNesFrontendUITests" */;
+			buildConfigurationList = 0EAF26022D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNES-FrontendUITests" */;
 			buildPhases = (
 				0EAF25EE2D5AA91600E089B3 /* Sources */,
 				0EAF25EF2D5AA91600E089B3 /* Frameworks */,
@@ -162,11 +166,11 @@
 			fileSystemSynchronizedGroups = (
 				0EAF25F52D5AA91600E089B3 /* SwiftNesFrontendUITests */,
 			);
-			name = SwiftNesFrontendUITests;
+			name = "SwiftNES-FrontendUITests";
 			packageProductDependencies = (
 			);
 			productName = SwiftNesFrontendUITests;
-			productReference = 0EAF25F22D5AA91600E089B3 /* SwiftNesFrontendUITests.xctest */;
+			productReference = 0EAF25F22D5AA91600E089B3 /* SwiftNES-FrontendUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -192,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EAF25D22D5AA91500E089B3 /* Build configuration list for PBXProject "SwiftNesFrontend" */;
+			buildConfigurationList = 0EAF25D22D5AA91500E089B3 /* Build configuration list for PBXProject "SwiftNES-Frontend" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -209,9 +213,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EAF25D62D5AA91500E089B3 /* SwiftNesFrontend */,
-				0EAF25E72D5AA91600E089B3 /* SwiftNesFrontendTests */,
-				0EAF25F12D5AA91600E089B3 /* SwiftNesFrontendUITests */,
+				0EAF25D62D5AA91500E089B3 /* SwiftNES-Frontend */,
+				0EAF25E72D5AA91600E089B3 /* SwiftNES-FrontendTests */,
+				0EAF25F12D5AA91600E089B3 /* SwiftNES-FrontendUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -267,12 +271,12 @@
 /* Begin PBXTargetDependency section */
 		0EAF25EA2D5AA91600E089B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EAF25D62D5AA91500E089B3 /* SwiftNesFrontend */;
+			target = 0EAF25D62D5AA91500E089B3 /* SwiftNES-Frontend */;
 			targetProxy = 0EAF25E92D5AA91600E089B3 /* PBXContainerItemProxy */;
 		};
 		0EAF25F42D5AA91600E089B3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0EAF25D62D5AA91500E089B3 /* SwiftNesFrontend */;
+			target = 0EAF25D62D5AA91500E089B3 /* SwiftNES-Frontend */;
 			targetProxy = 0EAF25F32D5AA91600E089B3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -415,19 +419,19 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mazjap.SwiftNesFrontend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.2;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Debug;
 		};
@@ -454,19 +458,19 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 15.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mazjap.SwiftNesFrontend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 2.2;
+				XROS_DEPLOYMENT_TARGET = 1.0;
 			};
 			name = Release;
 		};
@@ -488,7 +492,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftNesFrontend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftNesFrontend";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftNES-Frontend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftNES-Frontend";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Debug;
@@ -511,7 +515,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftNesFrontend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftNesFrontend";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwiftNES-Frontend.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SwiftNES-Frontend";
 				XROS_DEPLOYMENT_TARGET = 2.2;
 			};
 			name = Release;
@@ -563,7 +567,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EAF25D22D5AA91500E089B3 /* Build configuration list for PBXProject "SwiftNesFrontend" */ = {
+		0EAF25D22D5AA91500E089B3 /* Build configuration list for PBXProject "SwiftNES-Frontend" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EAF25FA2D5AA91600E089B3 /* Debug */,
@@ -572,7 +576,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EAF25FC2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNesFrontend" */ = {
+		0EAF25FC2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNES-Frontend" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EAF25FD2D5AA91600E089B3 /* Debug */,
@@ -581,7 +585,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EAF25FF2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNesFrontendTests" */ = {
+		0EAF25FF2D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNES-FrontendTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EAF26002D5AA91600E089B3 /* Debug */,
@@ -590,7 +594,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EAF26022D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNesFrontendUITests" */ = {
+		0EAF26022D5AA91600E089B3 /* Build configuration list for PBXNativeTarget "SwiftNES-FrontendUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EAF26032D5AA91600E089B3 /* Debug */,

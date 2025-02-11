@@ -1,7 +1,7 @@
 import SwiftUI
 
 @main
-struct SwiftNesFrontendApp: App {
+struct SwiftNESFrontendApp: App {
     var body: some Scene {
         WindowGroup {
             SnakeTestView()
