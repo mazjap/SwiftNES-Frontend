@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0EAF26092D5AA9EB00E089B3 /* SwiftNES in Frameworks */ = {isa = PBXBuildFile; productRef = 0EAF26082D5AA9EB00E089B3 /* SwiftNES */; };
+		0ED9EE1F2FFF5A3A00A5F9AC /* SwiftNES in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED9EE1E2FFF5A3A00A5F9AC /* SwiftNES */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,7 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0EAF26092D5AA9EB00E089B3 /* SwiftNES in Frameworks */,
+				0ED9EE1F2FFF5A3A00A5F9AC /* SwiftNES in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +121,7 @@
 			);
 			name = "SwiftNES-Frontend";
 			packageProductDependencies = (
-				0EAF26082D5AA9EB00E089B3 /* SwiftNES */,
+				0ED9EE1E2FFF5A3A00A5F9AC /* SwiftNES */,
 			);
 			productName = SwiftNesFrontend;
 			productReference = 0EAF25D72D5AA91500E089B3 /* SwiftNES-Frontend.app */;
@@ -206,7 +206,7 @@
 			mainGroup = 0EAF25CE2D5AA91500E089B3;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				0EAF26072D5AA9EB00E089B3 /* XCRemoteSwiftPackageReference "SwiftNES" */,
+				0E5B7361305CCEB700FEC01E /* XCLocalSwiftPackageReference "../SwiftNES-Backend" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 0EAF25D82D5AA91500E089B3 /* Products */;
@@ -401,10 +401,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SwiftNesFrontend/SwiftNesFrontend.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SwiftNES-Frontend/SwiftNESFrontend.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftNesFrontend/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftNES-Frontend/Preview Content\"";
 				DEVELOPMENT_TEAM = HFR8F4BT7E;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -419,10 +420,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mazjap.SwiftNesFrontend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -440,10 +441,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = SwiftNesFrontend/SwiftNesFrontend.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "SwiftNES-Frontend/SwiftNESFrontend.entitlements";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"SwiftNesFrontend/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"SwiftNES-Frontend/Preview Content\"";
 				DEVELOPMENT_TEAM = HFR8F4BT7E;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -458,10 +460,10 @@
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MACOSX_DEPLOYMENT_TARGET = 26.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mazjap.SwiftNesFrontend;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -605,21 +607,16 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		0EAF26072D5AA9EB00E089B3 /* XCRemoteSwiftPackageReference "SwiftNES" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mazjap/SwiftNES";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
+/* Begin XCLocalSwiftPackageReference section */
+		0E5B7361305CCEB700FEC01E /* XCLocalSwiftPackageReference "../SwiftNES-Backend" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../SwiftNES-Backend";
 		};
-/* End XCRemoteSwiftPackageReference section */
+/* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		0EAF26082D5AA9EB00E089B3 /* SwiftNES */ = {
+		0ED9EE1E2FFF5A3A00A5F9AC /* SwiftNES */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 0EAF26072D5AA9EB00E089B3 /* XCRemoteSwiftPackageReference "SwiftNES" */;
 			productName = SwiftNES;
 		};
 /* End XCSwiftPackageProductDependency section */
