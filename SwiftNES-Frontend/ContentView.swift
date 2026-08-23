@@ -84,7 +84,7 @@ struct ContentView: View {
     var body: some View {
         Group {
             if let image = vm.currentFrame {
-                Image(nsImage: NSImage(cgImage: image, size: NSSize(width: NES.PPU.Frame.width, height: NES.PPU.Frame.height)))
+                Image(nativeImage: NativeImage(cgImage: image))
             } else {
                 Text("No frame :/")
                     .font(.largeTitle)
@@ -100,4 +100,29 @@ struct ContentView: View {
 @available(macOS 12.0, *)
 #Preview {
     ContentView()
+}
+
+
+#if canImport(AppKit)
+import AppKit
+typealias NativeImage = NSImage
+
+extension NSImage {
+    convenience init(cgImage: CGImage) {
+        self.init(cgImage: cgImage, size: NSSize(width: cgImage.width, height: cgImage.height))
+    }
+}
+#else
+import UIKit
+typealias NativeImage = UIImage
+#endif
+
+extension Image {
+    init(nativeImage: NativeImage) {
+        #if canImport(AppKit)
+        self.init(nsImage: nativeImage)
+        #else
+        self.init(uiImage: nativeImage)
+        #endif
+    }
 }
