@@ -1,18 +1,6 @@
 import SwiftUI
 import SwiftNES
 
-actor NESRunner {
-    private let emulator = NES()
-    
-    func insertCartridge(_ url: URL) throws {
-        try emulator.load(cartridge: .init(fileURL: url))
-    }
-    
-    func start() throws -> AsyncThrowingStream<NES.FrameOrFinish, Error> {
-        try emulator.runStream()
-    }
-}
-
 @MainActor
 class ViewModel: ObservableObject {
     private let runner = NESRunner()
@@ -26,8 +14,8 @@ class ViewModel: ObservableObject {
                 throw NSError()
             }
             
-            try await runner.insertCartridge(url)
-            
+            try await runner.load(cartridge: .init(fileURL: url))
+
             for try await result in try await runner.start() {
                 switch result {
                 case let .frame(newFrame):
@@ -100,29 +88,4 @@ struct ContentView: View {
 @available(macOS 12.0, *)
 #Preview {
     ContentView()
-}
-
-
-#if canImport(AppKit)
-import AppKit
-typealias NativeImage = NSImage
-
-extension NSImage {
-    convenience init(cgImage: CGImage) {
-        self.init(cgImage: cgImage, size: NSSize(width: cgImage.width, height: cgImage.height))
-    }
-}
-#else
-import UIKit
-typealias NativeImage = UIImage
-#endif
-
-extension Image {
-    init(nativeImage: NativeImage) {
-        #if canImport(AppKit)
-        self.init(nsImage: nativeImage)
-        #else
-        self.init(uiImage: nativeImage)
-        #endif
-    }
 }
