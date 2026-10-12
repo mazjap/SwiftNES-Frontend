@@ -1,91 +1,55 @@
 import SwiftUI
-import SwiftNES
 
-@MainActor
-class ViewModel: ObservableObject {
-    private let runner = NESRunner()
-    @Published var currentFrame: CGImage?
-    
-    nonisolated
-    func start() async {
-        do {
-            guard let url = Bundle.main.url(forResource: "donkey_kong", withExtension: "nes") else {
-                print("bad")
-                throw NSError()
-            }
-            
-            try await runner.load(cartridge: .init(fileURL: url))
+struct ContentView: View {
+    @Environment(EmulatorViewModel.self) private var emulator
+    @Environment(\.scenePhase) private var scenePhase
 
-            for try await result in try await runner.start() {
-                switch result {
-                case let .frame(newFrame):
-                    let space = CGColorSpaceCreateDeviceRGB()
-                    // `toARGB()` hands back 0xAARRGGBB *as a UInt32*, which on a
-                    // little-endian machine sits in memory as [BB, GG, RR, AA].
-                    // byteOrder32Little tells CoreGraphics to read each pixel as a
-                    // little-endian word rather than as bytes in A,R,G,B order —
-                    // without it, alpha comes from blue and red/green are swapped.
-                    let info = CGBitmapInfo(
-                        rawValue: CGBitmapInfo.byteOrder32Little.rawValue
-                            | CGImageAlphaInfo.noneSkipFirst.rawValue
-                    )
-                    let imagePixels = newFrame.toARGB()
-                    let bytesPerPixel = MemoryLayout<UInt32>.size
-                    let pixelData = imagePixels.withUnsafeBufferPointer {
-                        Data(buffer: $0)
-                    }
-                    guard let provider = CGDataProvider(data: pixelData as CFData) else {
-                        print("bad image stuff!")
-                        return
-                    }
-                    let image = CGImage(
-                        width: NES.PPU.Frame.width,
-                        height: NES.PPU.Frame.height,
-                        bitsPerComponent: 8,
-                        bitsPerPixel: 32,
-                        bytesPerRow: NES.PPU.Frame.width * bytesPerPixel,
-                        space: space,
-                        bitmapInfo: info,
-                        provider: provider,
-                        decode: nil,
-                        shouldInterpolate: true,
-                        intent: .defaultIntent
-                    )
-                    
-                    await MainActor.run {
-                        self.currentFrame = image
-                    }
-                case let .finish(reason):
-                    print("end??? \(reason)")
+    #if os(macOS)
+    /// Tracks whether this window is key. `scenePhase` stays active on macOS
+    /// when another window, like Settings, takes focus.
+    @Environment(\.appearsActive) private var appearsActive
+    #endif
+
+    var body: some View {
+        GameScreen(frame: emulator.currentFrame)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            #if os(iOS)
+            .overlay(alignment: .bottom) {
+                // A connected controller makes the on-screen one redundant
+                if emulator.input.gamepads.connectedCount == 0 {
+                    TouchControlsOverlay()
                 }
             }
-        } catch {
-            print("Hit an error :/ \(error)")
-        }
-    }
-}
-
-@available(macOS 12.0, *)
-struct ContentView: View {
-    @StateObject private var vm = ViewModel()
-    
-    var body: some View {
-        Group {
-            if let image = vm.currentFrame {
-                Image(nativeImage: NativeImage(cgImage: image))
-            } else {
-                Text("No frame :/")
-                    .font(.largeTitle)
+            #endif
+            #if !os(macOS)
+            .overlay(alignment: .topTrailing) {
+                ControlsSettingsButton()
             }
-        }
-        .aspectRatio(Double(NES.PPU.Frame.width) / Double(NES.PPU.Frame.height), contentMode: .fit)
-        .task {
-            await vm.start()
-        }
+            #endif
+            .task {
+                await emulator.run()
+            }
+            // Releases that happen while the app isn't active never reach it,
+            // so anything held when focus leaves would stay stuck.
+            .onChange(of: scenePhase) { _, phase in
+                if phase != .active {
+                    emulator.input.releaseAll()
+                }
+            }
+            #if os(macOS)
+            .onChange(of: appearsActive) { _, isActive in
+                if !isActive {
+                    emulator.input.releaseAll()
+                }
+            }
+            #endif
     }
 }
 
-@available(macOS 12.0, *)
 #Preview {
+    let emulator = EmulatorViewModel()
+
     ContentView()
+        .environment(emulator)
+        .environment(emulator.input)
 }
