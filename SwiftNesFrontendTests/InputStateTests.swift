@@ -1,11 +1,12 @@
 import SwiftNES
+import SwiftNESRunner
 import Testing
 @testable import SwiftNES_Frontend
 
 @MainActor
 @Suite("Input State")
 struct InputStateTests {
-    let controllers = NES.Controller.Inputs()
+    let controllers = NESRunner.Inputs()
     let state: InputState
 
     init() {

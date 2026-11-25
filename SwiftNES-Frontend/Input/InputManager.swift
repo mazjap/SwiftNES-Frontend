@@ -1,6 +1,7 @@
 import Foundation
 import Observation
 import SwiftNES
+import SwiftNESRunner
 
 /// Owns everything input: the merged state, the settings, and the devices
 /// feeding them. Views reach it through the environment.
@@ -17,7 +18,7 @@ final class InputManager {
 
     @ObservationIgnored private var hasStarted = false
 
-    init(controllers: NES.Controller.Inputs, defaults: UserDefaults = .standard) {
+    init(controllers: NESRunner.Inputs, defaults: UserDefaults = .standard) {
         let settings = ControlSettings(defaults: defaults)
         let state = InputState(controllers: controllers)
         state.suppressesOpposingDirections = settings.suppressesOpposingDirections

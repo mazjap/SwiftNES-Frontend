@@ -2,6 +2,7 @@ import CoreGraphics
 import Foundation
 import Observation
 import SwiftNES
+import SwiftNESRunner
 
 @MainActor
 @Observable
@@ -29,7 +30,8 @@ final class EmulatorViewModel {
                 throw NSError()
             }
 
-            try await runner.load(cartridge: .init(fileURL: url))
+            let romBytes = Array(try Data(contentsOf: url))
+            try await runner.load(cartridge: .init(bytes: romBytes))
 
             for try await result in try await runner.start() {
                 switch result {

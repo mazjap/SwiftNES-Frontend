@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0ED9EE1F2FFF5A3A00A5F9AC /* SwiftNES in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED9EE1E2FFF5A3A00A5F9AC /* SwiftNES */; };
+		0ED9EE212FFF5A3A00A5F9AC /* SwiftNESRunner in Frameworks */ = {isa = PBXBuildFile; productRef = 0ED9EE202FFF5A3A00A5F9AC /* SwiftNESRunner */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0ED9EE1F2FFF5A3A00A5F9AC /* SwiftNES in Frameworks */,
+				0ED9EE212FFF5A3A00A5F9AC /* SwiftNESRunner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +124,7 @@
 			name = "SwiftNES-Frontend";
 			packageProductDependencies = (
 				0ED9EE1E2FFF5A3A00A5F9AC /* SwiftNES */,
+				0ED9EE202FFF5A3A00A5F9AC /* SwiftNESRunner */,
 			);
 			productName = SwiftNesFrontend;
 			productReference = 0EAF25D72D5AA91500E089B3 /* SwiftNES-Frontend.app */;
@@ -432,7 +435,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 1.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
 		};
@@ -472,7 +475,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 6.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				XROS_DEPLOYMENT_TARGET = 1.0;
+				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
 		};
@@ -618,6 +621,10 @@
 		0ED9EE1E2FFF5A3A00A5F9AC /* SwiftNES */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SwiftNES;
+		};
+		0ED9EE202FFF5A3A00A5F9AC /* SwiftNESRunner */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SwiftNESRunner;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

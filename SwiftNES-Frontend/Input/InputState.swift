@@ -1,5 +1,6 @@
 import Observation
 import SwiftNES
+import SwiftNESRunner
 
 /// Every input source's held buttons, merged into what the emulator sees.
 ///
@@ -20,11 +21,11 @@ final class InputState {
 
     private var held: [InputSource: [Player: Button]] = [:]
 
-    @ObservationIgnored private let controllers: NES.Controller.Inputs
+    @ObservationIgnored private let controllers: NESRunner.Inputs
 
     private static let opposingDirections: [Button] = [[.up, .down], [.left, .right]]
 
-    init(controllers: NES.Controller.Inputs) {
+    init(controllers: NESRunner.Inputs) {
         self.controllers = controllers
     }
 

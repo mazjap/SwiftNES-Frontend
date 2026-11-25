@@ -1,12 +1,13 @@
 import GameController
 import SwiftNES
+import SwiftNESRunner
 import Testing
 @testable import SwiftNES_Frontend
 
 @MainActor
 @Suite("Input Manager")
 struct InputManagerTests {
-    let controllers = NES.Controller.Inputs()
+    let controllers = NESRunner.Inputs()
     let input: InputManager
 
     init() throws {
